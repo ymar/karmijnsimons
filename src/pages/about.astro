@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import portrait from '../assets/brand/karmijn.jpg';
+---
+
+<Base title="About — Karmijn Simons">
+  <section
+    class="mx-auto flex max-w-[1440px] flex-col gap-[53px] px-6 pt-[122px] pb-[72px] md:gap-[39px] md:px-[60px] md:pt-[90px] md:pb-[60px] lg:flex-row lg:gap-[66px] lg:px-[100px] lg:pt-[150px] lg:pb-[150px]"
+  >
+    <div class="lg:w-[537px] lg:shrink-0">
+      <h1 class="heading-lg">About me</h1>
+      <div class="lead mt-[14px] lg:space-y-5 md:mt-12 md:max-w-[650px] lg:mt-[55px]">
+        <p>
+          I create visual work that helps people make sense of complex ideas. From illustration and visual systems to physical
+          objects, I translate stories, structures, and themes into clear, thoughtful forms. My work often lives in public,
+          educational, or societal contexts , where care, nuance, and clarity really matter.
+        </p>
+        <p>
+          I work at the intersection of illustration, design, and making. Some projects result in illustrations or visual
+          frameworks, others take shape as physical pieces. The form depends on the story, not the other way around.
+        </p>
+        <p>
+          I’m drawn to projects that ask for more than a quick visual solution.<br />
+          Work that involves layered information, sensitive topics, or systems that need to be understood. That can be public
+          communication for municipalities, educational tools, or visual work within fintech and other complex fields.
+        </p>
+        <p>
+          Clarity is central in everything I do, but never at the cost of tone or meaning. I care about how something lands,
+          who it’s for, and what it needs to carry.
+        </p>
+        <p>
+          I usually work closely with teams, from early ideas to final form. Asking questions, shaping the visual language
+          together, and making sure the outcome feels considered and grounded.
+        </p>
+        <p>
+          If you’re working on something that needs care, structure, and a clear visual voice, feel free to get in touch.
+        </p>
+      </div>
+    </div>
+    <Image
+      src={portrait}
+      alt="Karmijn Simons holding an open book in front of a light blue bookcase"
+      widths={[400, 700, 1000, 1366]}
+      sizes="(min-width: 1200px) 640px, 100vw"
+      class="h-[600px] w-full object-cover md:h-[1115px] lg:h-[807px] lg:flex-1"
+      loading="eager"
+    />
+  </section>
+</Base>

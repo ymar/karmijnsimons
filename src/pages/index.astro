@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import LogoMarquee from '../components/LogoMarquee.astro';
+import WorkGrid from '../components/WorkGrid.astro';
+---
+
+<Base>
+  <section class="px-6 pt-[177px] text-center md:pt-[127px] lg:pt-[151px]">
+    <h1 class="heading-xl mx-auto max-w-[342px] md:max-w-none">Visual identities with clarity and character.</h1>
+    <p class="lead mx-auto mt-6 max-w-[342px] md:max-w-[711px]">
+      Illustration-led branding for ideas that deserve to be understood and remembered.
+    </p>
+  </section>
+
+  <div class="mt-[17px] md:mt-[39px]">
+    <LogoMarquee />
+  </div>
+
+  <section class="pt-[65px] pb-[20px] md:pt-[48px]">
+    <WorkGrid variant="home" />
+  </section>
+
+  <section class="px-[21px] pt-[51px] pb-[57px] text-center md:pt-[41px]">
+    <h2 class="heading-lg">A considered way of working</h2>
+    <p class="lead mx-auto mt-5 max-w-[347px] md:max-w-[711px]">
+      I work closely with organisations and teams, often from an early stage. <br class="hidden md:inline" />My role is to help
+      shape visual language with clarity, care, and attention to context. <br class="hidden md:inline" />Based in the
+      Netherlands, working locally and internationally.
+    </p>
+  </section>
+</Base>

@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import laTimes from '../assets/logos/la-times.png';
+import unWomen from '../assets/logos/un-women.png';
+import mbo from '../assets/logos/mbo-digitaal.png';
+import rotterdam from '../assets/logos/gemeente-rotterdam.png';
+import comun from '../assets/logos/comun.png';
+import impactmapper from '../assets/logos/impactmapper.png';
+import rtl from '../assets/logos/rtl.png';
+
+const logos = [
+  { src: laTimes, alt: 'Los Angeles Times' },
+  { src: unWomen, alt: 'UN Women' },
+  { src: mbo, alt: 'MBO Digitaal' },
+  { src: rotterdam, alt: 'Gemeente Rotterdam' },
+  { src: comun, alt: 'Común' },
+  { src: impactmapper, alt: 'ImpactMapper' },
+  { src: rtl, alt: 'RTL' },
+];
+// 7 logos x 166px = 1162px per set; 50px/s like the original.
+---
+
+<section
+  class="overflow-hidden py-2.5"
+  style="mask-image: linear-gradient(to right, transparent 0%, #000 12.5%, #000 87.5%, transparent 100%)"
+  aria-label="Clients"
+>
+  <div class="marquee flex w-max">
+    {[0, 1, 2].map((set) => (
+      <ul class="flex shrink-0 gap-[100px] pr-[100px]" aria-hidden={set > 0 ? 'true' : undefined}>
+        {logos.map((l) => (
+          <li class="size-[66px] shrink-0">
+            <Image src={l.src} alt={set > 0 ? '' : l.alt} width={132} class="size-full object-contain" />
+          </li>
+        ))}
+      </ul>
+    ))}
+  </div>
+</section>
+
+<style>
+  .marquee {
+    animation: marquee 23.24s linear infinite;
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-1162px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      animation: none;
+    }
+  }
+</style>

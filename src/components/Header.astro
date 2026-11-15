@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+import mark from '../assets/brand/mark-black.png';
+import Triangle from './Triangle.astro';
+
+const links = [
+  { href: '/about', label: 'About' },
+  { href: '/work', label: 'Work' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-50 bg-white">
+  <div class="flex h-[60px] items-center justify-between px-6 md:h-[76px] md:px-12 lg:px-[68px]">
+    <div class="flex items-center gap-10 lg:gap-16">
+      <a href="/" aria-label="Karmijn Simons, home" class="block">
+        <Image src={mark} alt="" width={40} height={30} class="h-[29px] w-10 object-cover" loading="eager" />
+      </a>
+      <nav class="hidden items-center gap-8 md:flex" aria-label="Main">
+        {links.map((l) => (
+          <a href={l.href} class="font-display text-[16px] leading-[1.2] tracking-[-0.02em] text-muted transition-colors hover:text-ink">
+            {l.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <a
+      href="/contact"
+      class="font-display hidden rounded-full bg-wine px-7 py-3 text-[16px] leading-[1.2] tracking-[-0.02em] text-white transition-opacity hover:opacity-90 md:block"
+    >
+      Let's talk
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle grid size-8 place-items-center rounded-full bg-[#111] text-white transition-colors md:hidden"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg viewBox="0 0 12 12" width="12" height="12" class="transition-transform duration-300" aria-hidden="true">
+        <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="pointer-events-none fixed inset-x-0 top-[60px] bottom-0 bg-black/70 opacity-0 backdrop-blur-md transition-opacity duration-300 md:hidden"
+  >
+    <nav class="flex flex-col gap-8 px-6 pt-[238px]" aria-label="Mobile">
+      {links.map((l) => (
+        <a href={l.href} class="font-display text-[20px] leading-[1.2] tracking-[-0.02em] text-white">{l.label}</a>
+      ))}
+    </nav>
+    <div class="mt-[80px] flex justify-center">
+      <a href="/contact" class="font-display flex items-center gap-3 rounded-full bg-wine px-[34px] py-[18px] text-[16px] leading-[1.2] tracking-[-0.02em] text-white">
+        Let's talk <Triangle />
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    const icon = btn.querySelector('svg');
+    const set = (open: boolean) => {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      btn.classList.toggle('bg-[#111]', !open);
+      btn.classList.toggle('text-white', !open);
+      btn.classList.toggle('bg-[#eee]', open);
+      btn.classList.toggle('text-[#333]', open);
+      icon?.classList.toggle('rotate-45', open);
+      menu.classList.toggle('opacity-0', !open);
+      menu.classList.toggle('pointer-events-none', !open);
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', (e) => e.key === 'Escape' && set(false));
+  }
+</script>

@@ -1,0 +1,125 @@
+@import '@fontsource/instrument-serif/latin-400.css';
+@import '@fontsource/instrument-serif/latin-400-italic.css';
+@import '@fontsource/instrument-serif/latin-ext-400.css';
+@import '@fontsource/instrument-serif/latin-ext-400-italic.css';
+@import '@fontsource-variable/inter/opsz.css';
+@import 'tailwindcss';
+
+/* Breakpoints match the original Framer site: phone < 810, tablet 810-1199, desktop >= 1200. */
+@theme {
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
+
+  --font-serif: 'Instrument Serif', 'Times New Roman', serif;
+  /* "Inter Display" = Inter at its display optical size. */
+  --font-display: 'Inter Variable', Inter, Arial, sans-serif;
+  --font-sans: 'Inter Variable', Inter, Arial, sans-serif;
+
+  --color-ink: #000;
+  --color-muted: #666;
+  --color-soft: #767676;
+  --color-pink: #fc9acc;
+  --color-wine: #3e0012;
+  --color-submit: #540824;
+  --color-hello: #0e2616;
+  --color-mail: #2ca9f2;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 32;
+  font-weight: 500;
+}
+
+/* Headline scale from the original (size / line-height 1 / letter-spacing -0.036em). */
+@utility heading-xl {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.036em;
+  font-size: 50px;
+  @variant md { font-size: 64px; }
+  @variant lg { font-size: 80px; }
+}
+@utility heading-lg {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.036em;
+  font-size: 42px;
+  @variant md { font-size: 52px; }
+  @variant lg { font-size: 65px; }
+}
+@utility heading-md {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.036em;
+  font-size: 26px;
+  @variant md { font-size: 32px; }
+  @variant lg { font-size: 40px; }
+}
+@utility lead {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 32;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-muted);
+}
+
+/* Case study rich text (the CMS body). */
+@layer components {
+  .case-body {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 32;
+    font-weight: 500;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+  }
+  @media (min-width: 810px) {
+    .case-body { font-size: 16px; }
+  }
+  @media (min-width: 1200px) {
+    .case-body { font-size: 20px; }
+  }
+  .case-body > * + * { margin-top: 20px; }
+  .case-body strong { font-weight: 700; }
+  .case-body h2,
+  .case-body h4 {
+    font-family: var(--font-serif);
+    font-variation-settings: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.036em;
+    color: var(--color-ink);
+  }
+  .case-body h2 { font-size: 42px; }
+  .case-body h4 { font-size: 26px; }
+  @media (min-width: 810px) {
+    .case-body h2 { font-size: 52px; }
+    .case-body h4 { font-size: 32px; }
+  }
+  @media (min-width: 1200px) {
+    .case-body h2 { font-size: 65px; }
+    .case-body h4 { font-size: 40px; }
+  }
+  /* Images sit flush against each other, like in the original. */
+  .case-body p:has(> img) { margin-top: 0; line-height: 0; }
+  .case-body img { display: block; width: 100%; height: auto; }
+}

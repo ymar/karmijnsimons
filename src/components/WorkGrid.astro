@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+
+interface Props {
+  /** "home" is the narrower grid on the homepage, "work" the wider one on /work. */
+  variant?: 'home' | 'work';
+}
+const { variant = 'home' } = Astro.props;
+
+const items = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<div
+  class:list={[
+    'mx-auto grid grid-cols-1 gap-2',
+    variant === 'home'
+      ? 'max-w-[302px] md:max-w-[660px] md:grid-cols-3 lg:max-w-[1100px]'
+      : 'max-w-[342px] md:max-w-none md:grid-cols-2 md:px-[56px] lg:grid-cols-3',
+  ]}
+>
+  {items.map((item) => (
+    <a
+      href={`/work/${item.id}`}
+      class:list={[
+        'group relative block overflow-hidden bg-[#101010]',
+        variant === 'home' ? 'h-[200px] md:h-[311px] lg:h-auto lg:aspect-[361/583]' : 'h-[492px] md:h-auto md:aspect-[440/638] lg:aspect-[437/667]',
+      ]}
+    >
+      <Image
+        src={item.data.cover}
+        alt={item.data.coverAlt}
+        widths={[400, 700, 1000]}
+        sizes="(min-width: 1200px) 440px, (min-width: 810px) 50vw, 100vw"
+        class="absolute inset-0 size-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#101010]/30" aria-hidden="true"></div>
+      <h3 class="font-display absolute inset-x-6 bottom-6 text-[20px] leading-[1.2] tracking-[-0.04em] text-white">
+        {item.data.title}
+      </h3>
+    </a>
+  ))}
+</div>
