@@ -2,6 +2,7 @@
 title: "UN Women — illustration for a global gender equality organization"
 order: 2
 cover: ../../assets/work/un-women/cover.png
+description: "A series of illustrations for UN Women’s communication on ending violence against women and girls, including a central impact wheel."
 coverAlt: "UN Women report with the illustrated impact wheel"
 ---
 
@@ -26,8 +27,8 @@ Throughout the project, I focused on calm compositions, clear symbolism, and hum
 **Result**\
 The illustrations add clarity and coherence to UN Women’s communication. They help make complex information more accessible, while maintaining the integrity and weight of the subject matter.
 
-![](../../assets/work/un-women/01.png)
+![Sketch and final version of the UN Women impact wheel illustration, with symbols of flowers, a puzzle piece, a bird and linked rings](../../assets/work/un-women/01.png)
 
-![](../../assets/work/un-women/02.png)
+![UN Women report "Accelerating actions for ending violence against women and girls" with the illustrated cover](../../assets/work/un-women/02.png)
 
-![](../../assets/work/un-women/cover.png)
+![Person holding the illustrated UN Women report](../../assets/work/un-women/cover.png)

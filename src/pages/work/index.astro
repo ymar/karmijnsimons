@@ -1,9 +1,33 @@
 ---
 import Base from '../../layouts/Base.astro';
 import WorkGrid from '../../components/WorkGrid.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '../../site';
+
+const items = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    url: `${SITE.url}/work`,
+    name: 'Work by Karmijn Simons',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE.url}/work/${item.id}`,
+        name: item.data.title,
+      })),
+    },
+  },
+];
 ---
 
-<Base>
+<Base
+  title="Work — Karmijn Simons"
+  description="Illustration and visual identity work for UN Women, RTL, MBO Digitaal, Común, ImpactMapper and Bibliotheek Amstelland: for organizations that care about clarity, inclusion and people."
+  schema={schema}
+>
   <section class="px-6 pt-[208px] text-center md:pt-[160px]">
     <h1 class="heading-xl mx-auto max-w-[342px] md:max-w-[880px]">
       For <em class="text-soft">organizations</em> that <em class="text-soft">care</em> about clarity, inclusion, and people.

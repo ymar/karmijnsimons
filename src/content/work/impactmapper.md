@@ -2,6 +2,7 @@
 title: "ImpactMapper — illustration for impact-driven organizations"
 order: 6
 cover: ../../assets/work/impactmapper/cover.png
+description: "Illustrations for ImpactMapper’s impact report and digital materials, helping complex social and climate data feel clear and navigable."
 coverAlt: "ImpactMapper illustrations on a laptop screen"
 ---
 
@@ -26,8 +27,8 @@ The illustrations help complex content feel more approachable and navigable. The
 
 Illustration doesn’t make complexity disappear, but it can make it feel navigable. Here, visuals act as signposts: helping people move through information with clarity and confidence.
 
-![](../../assets/work/impactmapper/01.png)
+![ImpactMapper website sections with illustrations, shown on a laptop on a leather sofa](../../assets/work/impactmapper/01.png)
 
-![](../../assets/work/impactmapper/02.png)
+![Set of ImpactMapper illustrations about data, equality and climate impact](../../assets/work/impactmapper/02.png)
 
-![](../../assets/work/impactmapper/03.png)
+![Two ImpactMapper illustrations: a woman holding a globe among plants, and a man working on a laptop next to charts](../../assets/work/impactmapper/03.png)

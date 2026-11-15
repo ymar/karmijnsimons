@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
+import { SITE } from '../../site';
 
 export async function getStaticPaths() {
   const items = await getCollection('work');
@@ -10,9 +11,43 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 const { Content } = await render(item);
+const url = `${SITE.url}/work/${item.id}`;
+const client = item.data.title.split(' — ')[0];
+
+const schema = [
+  {
+    '@type': 'CreativeWork',
+    '@id': `${url}#work`,
+    url,
+    name: item.data.title,
+    headline: item.data.title,
+    description: item.data.description,
+    image: new URL(item.data.cover.src, SITE.url).href,
+    creator: { '@id': `${SITE.url}/#karmijn` },
+    author: { '@id': `${SITE.url}/#karmijn` },
+    funder: { '@type': 'Organization', name: client },
+    genre: 'Illustration',
+    inLanguage: 'en',
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE.url}/work` },
+      { '@type': 'ListItem', position: 3, name: client, item: url },
+    ],
+  },
+];
 ---
 
-<Base title={`${item.data.title} — Karmijn Simons`}>
+<Base
+  title={`${item.data.title} — Karmijn Simons`}
+  description={item.data.description}
+  image={item.data.cover}
+  imageAlt={item.data.coverAlt}
+  type="article"
+  schema={schema}
+>
   <section class="relative mt-[48px] h-[720px] overflow-hidden bg-[#101010] md:mt-0">
     <Image
       src={item.data.cover}

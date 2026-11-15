@@ -2,6 +2,7 @@
 title: "Común — illustration for a community-focused banking app"
 order: 1
 cover: ../../assets/work/comun-bank/cover.png
+description: "A warm, inclusive illustration system for Común, a banking app for Hispanic immigrants in the U.S., used across app, web and social."
 coverAlt: "Común banking app on a phone"
 ---
 
@@ -27,8 +28,8 @@ In this project, the focus wasn’t on adding style, but on creating a visual la
 
 **Early sketches focused on everyday situations and recognisable gestures:**
 
-![](../../assets/work/comun-bank/01.png)
+![Pencil sketches of everyday scenes and gestures for the Común illustrations, with the colour palette below](../../assets/work/comun-bank/01.png)
 
-![](../../assets/work/comun-bank/02.png)
+![Final Común illustrations of people at work and home, with icons for sending money, saving and paying](../../assets/work/comun-bank/02.png)
 
-![](../../assets/work/comun-bank/03.png)
+![Three Común app screens showing the illustrations in use](../../assets/work/comun-bank/03.png)

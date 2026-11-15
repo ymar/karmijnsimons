@@ -6,6 +6,8 @@ const work = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      /** Used for search results and link previews. */
+      description: z.string(),
       /** Position in the work grid (lowest first). */
       order: z.number(),
       cover: image(),

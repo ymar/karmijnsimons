@@ -2,9 +2,25 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import portrait from '../assets/brand/karmijn.jpg';
+import { SITE } from '../site';
+
+const schema = [
+  {
+    '@type': 'ProfilePage',
+    url: `${SITE.url}/about`,
+    name: 'About Karmijn Simons',
+    mainEntity: { '@id': `${SITE.url}/#karmijn` },
+  },
+];
 ---
 
-<Base title="About — Karmijn Simons">
+<Base
+  title="About — Karmijn Simons, illustrator and visual designer"
+  description="Karmijn Simons is an illustrator and visual designer in the Netherlands, creating illustrations, visual systems and physical pieces for public, educational and societal work."
+  image={portrait}
+  imageAlt="Karmijn Simons holding an open book in front of a light blue bookcase"
+  schema={schema}
+>
   <section
     class="mx-auto flex max-w-[1440px] flex-col gap-[53px] px-6 pt-[122px] pb-[72px] md:gap-[39px] md:px-[60px] md:pt-[90px] md:pb-[60px] lg:flex-row lg:gap-[66px] lg:px-[100px] lg:pt-[150px] lg:pb-[150px]"
   >

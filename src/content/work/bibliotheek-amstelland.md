@@ -2,6 +2,7 @@
 title: "Bibliotheek Amstelland — illustration for summer reading"
 order: 5
 cover: ../../assets/work/bibliotheek-amstelland/cover.png
+description: "Illustration for Bibliotheek Amstelland’s summer reading campaign: a family driving through the clouds, with reading as part of the journey."
 coverAlt: "Bibliotheek Amstelland summer reading poster on the street"
 ---
 
@@ -26,6 +27,6 @@ The floating, cloud-based setting adds a sense of imagination and escape, aligni
 **Result**\
 The illustration supports the campaign by connecting reading to a positive, recognisable summer feeling. It helps position the library as something that travels with you, before, during, and beyond the holiday.
 
-![](../../assets/work/bibliotheek-amstelland/01.png)
+![Illustration of a family driving a green car through the clouds on their way to a summer holiday, with books flying around them](../../assets/work/bibliotheek-amstelland/01.png)
 
-![](../../assets/work/bibliotheek-amstelland/cover.png)
+![Bibliotheek Amstelland summer reading poster in a street advertising column in Amsterdam](../../assets/work/bibliotheek-amstelland/cover.png)

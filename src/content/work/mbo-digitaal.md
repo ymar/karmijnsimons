@@ -2,6 +2,7 @@
 title: "MBO Digitaal — illustration and visual design for vocational education"
 order: 3
 cover: ../../assets/work/mbo-digitaal/cover.png
+description: "Illustration and visual design for MBO Digitaal: covers, printed tools, event visuals and a card game for vocational education in the Netherlands."
 coverAlt: "MBO Innovatiecollege poster at a bus stop"
 ---
 
@@ -26,19 +27,19 @@ Across different formats, from printed materials to conference visuals, consiste
 **Result**\
 The visual language helps MBO Digitaal communicate complex topics in a clear and approachable way. The illustrations support understanding, spark conversation, and bring cohesion across different tools and moments — from day-to-day use to large-scale events.
 
-![](../../assets/work/mbo-digitaal/01.png)
+![MBO Digitaal illustrations around digital skills, including a conversation cycle diagram](../../assets/work/mbo-digitaal/01.png)
 
-![](../../assets/work/mbo-digitaal/02.png)
+![MBO Innovatiecollege posters at a bus shelter and on a wall](../../assets/work/mbo-digitaal/02.png)
 
-![](../../assets/work/mbo-digitaal/03.png)
+![Isometric illustrations of people working together on digital transformation in vocational education](../../assets/work/mbo-digitaal/03.png)
 
-![](../../assets/work/mbo-digitaal/04.png)
+![MBO Digitaal printed booklets and covers with illustrations](../../assets/work/mbo-digitaal/04.png)
 
-![](../../assets/work/mbo-digitaal/05.png)
+![MBO Digitaal printed materials, including a cover reading "Bouw een sterke digitale basis"](../../assets/work/mbo-digitaal/05.png)
 
-![](../../assets/work/mbo-digitaal/06.png)
+![Sticker and badge designs for MBO Digitaal with short slogans](../../assets/work/mbo-digitaal/06.png)
 
-![](../../assets/work/mbo-digitaal/07.png)
+![The MBO Digitaal card game: box, cards and illustrated card fronts](../../assets/work/mbo-digitaal/07.png)
 
 **The card game**\
 One of the central outcomes of this collaboration was the development of a physical card game designed to support conversation and reflection within vocational education. The cards are used in workshops and team sessions, helping educators discuss themes like digital skills, professional development, and collaboration.

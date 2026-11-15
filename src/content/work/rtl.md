@@ -2,6 +2,7 @@
 title: "RTL — illustration for large-scale brand communication"
 order: 4
 cover: ../../assets/work/rtl/cover.jpg
+description: "A large-format illustrated facade banner for RTL, designed to read clearly from across the street."
 coverAlt: "RTL facade banner on a building"
 ---
 
@@ -24,4 +25,4 @@ I focused on clear shapes, strong composition, and a limited but expressive visu
 **Result**\
 The final illustration translates RTL’s brand into a striking, public-facing visual. Scaled up as a facade banner, it functions as a clear and confident presence in the urban environment.
 
-![](../../assets/work/rtl/01.jpg)
+![Large illustrated RTL facade banner on an office building](../../assets/work/rtl/01.jpg)
