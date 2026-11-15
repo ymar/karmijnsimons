@@ -33,4 +33,16 @@ It shows up on the home page, `/work` and at `/work/<slug>` automatically. Image
 
 ## Contact form
 
-Framer handled form submissions itself; that doesn't come along. Set `PUBLIC_FORM_ENDPOINT` (see `.env.example`) to a form service URL such as Formspree. Without it, Submit opens the visitor's email app with the message filled in, addressed to hi@karmijnsimons.com.
+The form posts to `/api/contact`, handled by the Worker in `worker/index.ts`. It emails the message to hi@karmijnsimons.com through Cloudflare Email Service, with the visitor's address as reply-to, so hitting Reply answers them directly. The binding in `wrangler.jsonc` only allows sending to that one address.
+
+One-time setup in the Cloudflare dashboard (Compute → Email Service):
+1. **Email Sending → Onboard Domain → karmijnsimons.com.** This adds DNS records on the `cf-bounce` subdomain plus a DMARC record; the Google Workspace MX records for her inbox are left alone.
+2. Verify hi@karmijnsimons.com as a destination address if the dashboard asks for it.
+
+## Deploy
+
+```bash
+npm run deploy
+```
+
+Builds the site and deploys the Worker (`karmijnsimons`) with Wrangler. Needs `CLOUDFLARE_API_TOKEN` in the environment.
