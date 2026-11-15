@@ -26,7 +26,8 @@ interface Env {
 // Must be verified destination addresses on the Cloudflare account (Email Service > Destination addresses).
 const TO = ['hi@karmijnsimons.com', 'karmijn@studioheem.com'];
 // Sent from ymar.nl, the domain onboarded for Cloudflare Email Sending.
-const FROM = { email: 'website@ymar.nl', name: 'karmijnsimons.com' };
+const FROM = { email: 'website@ymar.nl', name: 'Karmijn Simons website' };
+const SITE = 'karmijnsimons.com';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const json = (body: unknown, status = 200) =>
@@ -53,15 +54,18 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
   if (!message) return json({ ok: false, error: 'Message is required' }, 400);
   if (email && !EMAIL_RE.test(email)) return json({ ok: false, error: 'Invalid email address' }, 400);
 
-  const subject = `Website enquiry${name ? ` from ${name}` : ''}`.replace(/[\r\n]+/g, ' ');
+  const subject = `[${SITE}] New enquiry${name ? ` from ${name}` : ''}`.replace(/[\r\n]+/g, ' ');
   const text = [
-    message,
+    `New enquiry via the contact form on ${SITE}`,
     '',
-    '---',
     `Name: ${name || '(not given)'}`,
     `Email: ${email || '(not given)'}`,
     '',
-    'Sent from the contact form on karmijnsimons.com',
+    'Message:',
+    message,
+    '',
+    '---',
+    email ? 'Reply to this email to answer the sender directly.' : 'No email address given, so replying will not reach the sender.',
   ].join('\n');
 
   try {
