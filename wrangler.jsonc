@@ -11,11 +11,11 @@
     // Only the form endpoint runs code; every page is served straight from the static assets.
     "run_worker_first": ["/api/*"]
   },
-  // Cloudflare Email Service. Locked to Karmijn's own address so the form can't be used to mail anyone else.
+  // Cloudflare Email Service. Locked to Karmijn's address so the form can't be used to mail anyone else.
   "send_email": [
     {
       "name": "EMAIL",
-      "allowed_destination_addresses": ["hi@karmijnsimons.com"],
+      "allowed_destination_addresses": ["karmijn@studioheem.com"],
       "remote": true
     }
   ]
