@@ -5,8 +5,6 @@ cover: ../../assets/work/impactmapper/cover.png
 coverAlt: "ImpactMapper illustrations on a laptop screen"
 ---
 
-#### ImpactMapper — illustration for impact-driven organizations
-
 **Client**\
 ImpactMapper
 
@@ -28,14 +26,8 @@ The illustrations help complex content feel more approachable and navigable. The
 
 Illustration doesn’t make complexity disappear, but it can make it feel navigable. Here, visuals act as signposts: helping people move through information with clarity and confidence.
 
-<p><br></p>
-
 ![](../../assets/work/impactmapper/01.png)
-
-<p><br></p>
 
 ![](../../assets/work/impactmapper/02.png)
 
 ![](../../assets/work/impactmapper/03.png)
-
-<p><br></p>

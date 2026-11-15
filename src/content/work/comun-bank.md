@@ -5,8 +5,6 @@ cover: ../../assets/work/comun-bank/cover.png
 coverAlt: "Común banking app on a phone"
 ---
 
-#### Común — illustration for a community-focused banking app
-
 **Client**\
 Común mobile banking app
 
@@ -34,5 +32,3 @@ In this project, the focus wasn’t on adding style, but on creating a visual la
 ![](../../assets/work/comun-bank/02.png)
 
 ![](../../assets/work/comun-bank/03.png)
-
-<p><br></p>

@@ -34,7 +34,7 @@ const items = (await getCollection('work')).sort((a, b) => a.data.order - b.data
         sizes="(min-width: 1200px) 440px, (min-width: 810px) 50vw, 100vw"
         class="absolute inset-0 size-full object-cover"
       />
-      <div class="absolute inset-0 bg-[#101010]/30" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#101010]/70 via-[#101010]/25 via-40% to-[#101010]/10" aria-hidden="true"></div>
       <h3 class="font-display absolute inset-x-6 bottom-6 text-[20px] leading-[1.2] tracking-[-0.04em] text-white">
         {item.data.title}
       </h3>

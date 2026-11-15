@@ -5,8 +5,6 @@ cover: ../../assets/work/mbo-digitaal/cover.png
 coverAlt: "MBO Innovatiecollege poster at a bus stop"
 ---
 
-#### MBO Digitaal — illustration and visual design for vocational education
-
 **Client**\
 MBO Digitaal
 

@@ -5,8 +5,6 @@ cover: ../../assets/work/bibliotheek-amstelland/cover.png
 coverAlt: "Bibliotheek Amstelland summer reading poster on the street"
 ---
 
-## Bibliotheek Amstelland — illustration for summer reading
-
 **Client**\
 Bibliotheek Amstelland
 
@@ -31,5 +29,3 @@ The illustration supports the campaign by connecting reading to a positive, reco
 ![](../../assets/work/bibliotheek-amstelland/01.png)
 
 ![](../../assets/work/bibliotheek-amstelland/cover.png)
-
-<p><br></p>

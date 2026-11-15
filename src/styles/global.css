@@ -20,9 +20,6 @@
   --color-soft: #767676;
   --color-pink: #fc9acc;
   --color-wine: #3e0012;
-  --color-submit: #540824;
-  --color-hello: #0e2616;
-  --color-mail: #2ca9f2;
 }
 
 @layer base {
@@ -119,7 +116,11 @@
     .case-body h2 { font-size: 65px; }
     .case-body h4 { font-size: 40px; }
   }
-  /* Images sit flush against each other, like in the original. */
-  .case-body p:has(> img) { margin-top: 0; line-height: 0; }
+  /* Text keeps a readable line length; images use the full width. */
+  .case-body > :not(:has(> img)) { max-width: 760px; }
+  /* Images in a series sit flush, like a collage; give them room from the text. */
+  .case-body > p:has(> img) { margin-top: 0; line-height: 0; }
+  .case-body > :not(:has(> img)) + p:has(> img),
+  .case-body > p:has(> img) + :not(:has(> img)) { margin-top: 48px; }
   .case-body img { display: block; width: 100%; height: auto; }
 }
