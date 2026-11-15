@@ -10,7 +10,7 @@ interface EmailAddress {
 }
 interface SendEmail {
   send(message: {
-    to: string | EmailAddress;
+    to: string | EmailAddress | (string | EmailAddress)[];
     from: string | EmailAddress;
     subject: string;
     text?: string;
@@ -23,8 +23,8 @@ interface Env {
   EMAIL: SendEmail;
 }
 
-// Must be a verified destination address on the Cloudflare account (Email Service > Destination addresses).
-const TO = 'hi@karmijnsimons.com';
+// Must be verified destination addresses on the Cloudflare account (Email Service > Destination addresses).
+const TO = ['hi@karmijnsimons.com', 'karmijn@studioheem.com'];
 // Sent from ymar.nl, the domain onboarded for Cloudflare Email Sending.
 const FROM = { email: 'website@ymar.nl', name: 'karmijnsimons.com' };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
