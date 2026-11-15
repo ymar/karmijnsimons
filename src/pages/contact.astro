@@ -73,6 +73,8 @@ const label = 'block font-sans text-[12px] leading-[1.2] font-medium text-[#888]
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
         show('Thank you! Your message has been sent.');
+        // Shows up in Google Analytics as a lead (Reports → Engagement → Events).
+        (window as any).gtag?.('event', 'generate_lead', { form: 'contact' });
       } catch {
         show('Something went wrong. Please email hi@karmijnsimons.com instead.');
       } finally {
