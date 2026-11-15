@@ -65,13 +65,14 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
   ].join('\n');
 
   try {
-    await env.EMAIL.send({
+    const result = await env.EMAIL.send({
       to: TO,
       from: FROM,
       subject,
       text,
       ...(email ? { replyTo: name ? { email, name } : email } : {}),
     });
+    console.log('Contact form sent:', result?.messageId);
     return json({ ok: true });
   } catch (err) {
     const e = err as { code?: string; message?: string };
