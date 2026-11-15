@@ -23,8 +23,9 @@ interface Env {
   EMAIL: SendEmail;
 }
 
-// Must be verified destination addresses on the Cloudflare account (Email Service > Destination addresses).
-const TO = ['hi@karmijnsimons.com', 'karmijn@studioheem.com'];
+// Must be a verified destination address on the Cloudflare account (Email Service > Destination addresses).
+// Studio Heem has its own site and form (Worker "studioheem"), which mails karmijn@studioheem.com.
+const TO = 'hi@karmijnsimons.com';
 // Sent from ymar.nl, the domain onboarded for Cloudflare Email Sending.
 const FROM = { email: 'website@ymar.nl', name: 'Karmijn Simons website' };
 const SITE = 'karmijnsimons.com';

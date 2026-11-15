@@ -33,9 +33,9 @@ It shows up on the home page, `/work` and at `/work/<slug>` automatically. Image
 
 ## Contact form
 
-The form posts to `/api/contact`, handled by the Worker in `worker/index.ts`. It emails the message to hi@karmijnsimons.com and karmijn@studioheem.com through Cloudflare Email Service, sent from `website@ymar.nl` with the visitor's address as reply-to, so hitting Reply answers them directly. The binding in `wrangler.jsonc` only allows sending to those addresses.
+The form posts to `/api/contact`, handled by the Worker in `worker/index.ts`. It emails the message to hi@karmijnsimons.com through Cloudflare Email Service, sent from `website@ymar.nl` with the visitor's address as reply-to, so hitting Reply answers them directly. The binding in `wrangler.jsonc` only allows sending to that address. (Studio Heem is a separate site with its own form and inbox.)
 
-To change the recipient: verify the new address under Compute → Email Service → Destination addresses, then add it to `TO` in `worker/index.ts` and `allowed_destination_addresses` in `wrangler.jsonc`.
+To change the recipient: verify the new address under Compute → Email Service → Destination addresses, then update `TO` in `worker/index.ts` and `allowed_destination_addresses` in `wrangler.jsonc`.
 
 ## Deploy
 

@@ -15,7 +15,7 @@
   "send_email": [
     {
       "name": "EMAIL",
-      "allowed_destination_addresses": ["hi@karmijnsimons.com", "karmijn@studioheem.com"],
+      "allowed_destination_addresses": ["hi@karmijnsimons.com"],
       "remote": true
     }
   ]
